@@ -1,6 +1,7 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 }
 
 .fade {
@@ -21,6 +22,7 @@
   border: solid 2px rgb(255, 0, 128);
   border-radius: 15px;
   box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.521);
+  color: white;
 }
 
 .button:hover {
@@ -30,13 +32,140 @@
   transition: 0.5s;
 }
 
+.button a {
+  text-decoration: none;
+  color: white;
+}
+
 .infoBlock {
   margin-inline: 15%;
 }
 
+.infoBlockBlue {
+  background-color: rgb(43, 59, 131);
+  padding-inline: 2%;
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
 .infoParagraph {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 22px;
+}
+
+.infoParagraphBlue {
+  font-size: 22px;
+  color: white;
+  margin-inline: 15%;
+}
+
+.subtitle {
+  font-size: 40px;
+}
+
+.pinkSubtitle {
+  font-size: 40px;
+  color: rgb(255, 0, 128);
+}
+
+.subtitleBlue {
+  font-size: 40px;
+  color: white;
+  margin-top: 0;
+}
+
+.subtitleBlueSmall {
+  font-size: 30px;
+  color: white;
+}
+
+.paragraphsWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa {
+  padding: 18px;
+  font-size: 40px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  transition: 0.5s;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  transition: 0.5s;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.eventWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 45%;
+  max-height: 50px;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  border-bottom: solid 2px rgb(255, 0, 128);
+}
+
+.eventWrapper:hover {
+  cursor: pointer;
+}
+
+.eventItemDateWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventNameLocation {
+  color: white;
+  font-size: 20px;
+  width: 40%;
+  height: 30px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.eventDay {
+  margin: 0;
+  padding: 0;
+  color: gray;
+  font-size: 18px;
+}
+
+.eventMonth {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 18px;
+}
+
+.eventDate {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 40px;
+}
+
+.eventLocation {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 @media (max-width: 600px) {
@@ -46,5 +175,6 @@
 
   .infoParagraph {
     text-align: left;
+    font-size: 18px;
   }
 }

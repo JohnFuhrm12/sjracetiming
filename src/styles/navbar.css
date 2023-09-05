@@ -131,6 +131,31 @@
     text-shadow: 0 0 5px rgba(255, 0, 128, 0.707), 0 0 10px rgba(255, 0, 128, 0.707);
 }
 
+@media (max-width: 900px) {
+    #logoWrapper {
+        margin-left: -12%;
+    }
+
+    .navLink {
+        display: none;
+    }
+
+    #logoImg {
+        max-width: 25%;
+        padding: 2%;
+    }
+
+    #hamburgerMenu {
+        margin-left: 0%;
+    }
+
+    #hamburgerMenu:before,
+    #hamburgerMenu:after,
+    #hamburgerMenu input {
+        display: block;
+    }
+  }
+
 @media (max-width: 600px) {
     #logoWrapper {
         margin-left: -25%;

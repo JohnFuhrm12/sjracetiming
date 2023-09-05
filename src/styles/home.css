@@ -6,13 +6,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     text-align: left;
 }
 
 #title {
     font-size: 40px;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 #pinkTitle {
@@ -29,6 +29,52 @@
     margin-inline: 1%;
 }
 
+#servicesBlocksWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.servicesInfoWrapper {
+    text-align: left;
+    max-width: 30%;
+}
+
+.servicesListUL {
+    padding: 0;
+    margin-left: -10%;
+}
+
+.listItem {
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+#socialIconsWrapperHomePage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 12%;
+    position: relative;
+    top: 70%;
+    left: 85%;
+}
+
+@media (max-width: 900px) {
+    #homePageBackground {
+        height: 60vh;
+    }
+
+    #buttonWrapper button {
+        margin-inline: 2%;
+    }
+
+    #homePageBackground {
+        height: 90vh;
+        background-attachment: scroll;
+    }
+  }
+
 @media (max-width: 600px) {
     #homePageBackground {
         height: 60vh;
@@ -36,5 +82,14 @@
 
     #buttonWrapper button {
         margin-inline: 2%;
+    }
+
+    #homePageBackground {
+        height: 90vh;
+        background-attachment: scroll;
+    }
+
+    #title {
+        font-size: 30px;
     }
   }
