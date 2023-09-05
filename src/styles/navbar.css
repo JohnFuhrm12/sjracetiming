@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 7px transparent;
+    border-image: linear-gradient(0.10turn, rgba(255,0,128), rgb(15, 43, 170), rgba(89, 0, 255, 0));
+    border-image-slice: 1;
+}
+
+#logoWrapper {
+    margin-left: -5%;
+}
+
+#logoWrapper:hover {
+    cursor: pointer;
+}
+
+#logoImg {
+    min-width: 100px;
+    max-width: 35%;
+    padding: 5%;
+}
+
+#navLinksWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    justify-content: space-around;
+}
+
+.navLink {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin-inline: 5%;
+    border-bottom: solid 4px transparent;
+    transition: 0.5s;
+    padding-bottom: 2%;
+    max-height: 40px;
+    margin-top: 14%;
+}
+
+.navLink:hover {
+    cursor: pointer;
+    border-bottom: solid 3.5px rgba(255, 0, 128, 0.707);
+    transition: 0.5s;
+}

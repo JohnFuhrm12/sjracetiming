@@ -1,0 +1,30 @@
+#homePageBackground {
+    background-image: url('https://res.cloudinary.com/dvmw658s9/image/upload/v1693883508/SJ%20Race%20Timing/qexfakhgqxaughlxoaze.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 70vh;
+    text-align: left;
+}
+
+#title {
+    font-size: 40px;
+    margin-top: 5%;
+}
+
+#pinkTitle {
+    color: rgb(255, 0, 128);
+}
+
+#buttonWrapper {
+    text-align: right;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+#buttonWrapper button {
+    margin-inline: 1%;
+}
