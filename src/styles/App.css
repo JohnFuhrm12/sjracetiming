@@ -29,3 +29,22 @@
   border: solid 2px rgb(36, 66, 201);
   transition: 0.5s;
 }
+
+.infoBlock {
+  margin-inline: 15%;
+}
+
+.infoParagraph {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .infoBlock {
+    margin-inline: 5%;
+  }
+
+  .infoParagraph {
+    text-align: left;
+  }
+}

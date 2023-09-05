@@ -46,3 +46,113 @@
     border-bottom: solid 3.5px rgba(255, 0, 128, 0.707);
     transition: 0.5s;
 }
+
+#hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: max-content;
+    margin-top: 5px;
+    margin-left: -40%;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+#hamburgerMenu:hover {
+    cursor: pointer;
+}
+
+#hamburgerMenu:before,
+#hamburgerMenu:after,
+#hamburgerMenu input {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: rgba(255, 0, 128, 0.707);
+    border-radius: 15px;
+    transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
+    transform-origin: left center;
+    display: none;
+}
+
+#hamburgerMenu input {
+   appearance: none;
+   padding: 0;
+   margin: 0;
+   outline: none;
+   pointer-events: none;
+}
+
+#hamburgerMenu:has(input:checked)::before {
+    rotate: 45deg;
+    width: 24px;
+    translate: 0 2.5px;
+ }
+
+ #hamburgerMenu:has(input:checked)::after {
+    rotate: -45deg;
+    width: 24px;
+    translate: 0 -2.5px;
+ }
+
+
+ #hamburgerMenu input:checked {
+    opacity: 0;
+    width: 0;
+ }
+
+ #hamburgerNav {
+    translate: -100%;
+    background-color: rgba(24, 24, 24, 0.864);
+    position: relative;
+    z-index: 3;
+    transition: 200ms ease-in-out;
+    height: 300px;
+    margin-bottom: -300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+
+ .mobileNavLink {
+    cursor: pointer;
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 1%;
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.mobileNavLink:hover {
+    transition: 0.5s;
+    text-shadow: 0 0 5px rgba(255, 0, 128, 0.707), 0 0 10px rgba(255, 0, 128, 0.707);
+}
+
+@media (max-width: 600px) {
+    #logoWrapper {
+        margin-left: -25%;
+    }
+
+    .navLink {
+        display: none;
+    }
+
+    #logoImg {
+        max-width: 25%;
+        padding: 2%;
+    }
+
+    #hamburgerMenu {
+        margin-left: 0%;
+    }
+
+    #hamburgerMenu:before,
+    #hamburgerMenu:after,
+    #hamburgerMenu input {
+        display: block;
+    }
+
+}
