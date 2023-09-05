@@ -1,0 +1,31 @@
+#footerWrapper {
+    border-top: solid 7px transparent;
+    border-image: linear-gradient(0.10turn, rgba(255,0,128), rgb(15, 43, 170), rgba(89, 0, 255, 0));
+    border-image-slice: 1;
+    margin-top: 15%;
+}
+
+#sponsorImgWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-inline: 7%;
+}
+
+.sponsorImg {
+    max-width: 200px;
+    max-height: 60px;
+    padding: 25px;
+}
+
+.sponsorImg:hover {
+    cursor: pointer;
+}
+
+#footerLinksSmallWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20%;
+    margin: 0 auto;
+}
