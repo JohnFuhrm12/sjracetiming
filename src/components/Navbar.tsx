@@ -13,6 +13,7 @@ function Navbar() {
                     <Link to='/' className='navLink'>Services</Link>
                     <Link to='/' className='navLink'>Schedule</Link>
                     <Link to='/' className='navLink'>Results</Link>
+                    <Link to='/' className='navLink'>Contact</Link>
                 </div>
             </div>
         </>
