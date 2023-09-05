@@ -53,7 +53,7 @@ function Home() {
                                     <h2 className='eventDay'>{event.eventDay}</h2>
                                     <h2 className='eventMonth'>{event.eventMonth}</h2>
                                 </div>
-                                <h2 className='eventNameLocation'>{`${event.eventName} / `}<span className='eventLocation'>{event.eventLocation}</span></h2>
+                                <h2 className='eventNameLocation'>{event.eventName}<span className='slash'> / </span><span className='eventLocation'>{event.eventLocation}</span></h2>
                                 <button className='button'><a href={event.eventLink} target='_blank'>Register</a></button>
                             </div>
                         </>

@@ -113,30 +113,49 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 45%;
+  max-width: 42%;
   max-height: 50px;
   padding-bottom: 2%;
   margin-bottom: 2%;
   border-bottom: solid 2px rgb(255, 0, 128);
+  transition: 0.5s;
 }
 
 .eventWrapper:hover {
   cursor: pointer;
 }
 
+.eventWrapper:hover .eventDate {
+  translate: -300%;
+  transition: 0.5s;
+}
+
+.eventWrapper:hover .eventItemDateWrapper {
+  translate: -500%;
+  transition: 0.5s;
+}
+
+.eventWrapper:hover .eventNameLocation {
+  translate: -35%;
+  transition: 0.5s;
+}
+
 .eventItemDateWrapper {
   display: flex;
   flex-direction: column;
+  transition: 0.5s;
 }
 
 .eventNameLocation {
+  text-align: left;
   color: white;
   font-size: 20px;
-  width: 40%;
+  width: 55%;
   height: 30px;
   padding-bottom: 20px;
   box-sizing: border-box;
   overflow: hidden;
+  transition: 0.5s;
 }
 
 .eventDay {
@@ -158,6 +177,7 @@
   padding: 0;
   color: white;
   font-size: 40px;
+  transition: 0.5s;
 }
 
 .eventLocation {
