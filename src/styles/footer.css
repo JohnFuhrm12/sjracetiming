@@ -28,3 +28,30 @@
     width: 20%;
     margin: 0 auto;
 }
+
+@media (max-width: 600px) { 
+    #sponsorImgWrapper {
+        margin-inline: 2%;
+        margin-top: 3%;
+    }
+
+    .sponsorImg {
+        max-width: 70px;
+        max-height: 30px;
+        padding: 5px;
+    }
+
+    #footerLinksSmallWrapper {
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    #copyright {
+        font-size: 12px;
+    }
+
+    .footerLinkSmall {
+        font-size: 14px;
+    }
+}

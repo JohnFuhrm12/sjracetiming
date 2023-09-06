@@ -179,6 +179,12 @@
     font-size: 20px;
 }
 
+.eventsResultsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
 @media (max-width: 900px) {
     #homePageBackground {
         height: 60vh;
@@ -211,4 +217,111 @@
     #title {
         font-size: 30px;
     }
+
+    #buttonWrapper {
+        margin-top: 0;
+        position: relative;
+        top: 3%;
+    }
+    
+    #buttonWrapper button {
+        margin-inline: 2%;
+    }
+
+    #socialIconsWrapperHomePage {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 40%;
+        position: relative;
+        top: 80%;
+        left: 55%;
+    }
+
+    #servicesBlocksWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .servicesInfoWrapper {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .eventsResultsWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+    #eventsBlock {
+        width: 100%;
+        margin-bottom: 15%;
+    }
+      
+    #resultsBlock {
+        width: 100%;
+    }
+
+    .seeAllLink {
+        font-size: 25px;
+        padding-bottom: 2%;
+    }
+
+    #contactLogoFormHomeWrapper {
+        flex-direction: column;
+    }
+
+    #logoContactBlock {
+        position: relative;
+        max-width: 200px;
+        max-height: 150px;
+        top: 30px;
+        left: 0px;
+        margin: 0 auto;
+    }
+
+    #contactFormBlockHome {
+        width: 100%;
+    }
+
+    #contactHomeTitle {
+        font-size: 25px;
+        margin-top: 15%;
+        margin-bottom: 2%;
+    }
+
+    #contactFormHome {
+        gap: 8px;
+    }
+
+    .contactInputHome {
+        font-size: 14px;
+        padding: 6px;
+    }
+    
+    .contactSelectHome {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .contactTextAreaHome {
+        font-size: 16px;
+        padding: 8px;
+        background-color: white;
+        color: black;
+        border: solid 2px black;
+        outline: none;
+        resize: vertical;
+        min-height: 120px;
+    }
+    
+    #contactFormHomeButton {
+        max-width: 35%;
+        position: relative;
+        left: 64%;
+        font-size: 16px;
+    }
+    
   }

@@ -45,7 +45,6 @@ function Home() {
     const backgroundImages = ['url(https://res.cloudinary.com/dvmw658s9/image/upload/v1693883508/SJ%20Race%20Timing/qexfakhgqxaughlxoaze.jpg)', 
     'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694020064/SJ%20Race%20Timing/av8msxn695ipcbzmmod9.jpg)',
      'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694019957/SJ%20Race%20Timing/e00x6odujttar6bxntsm.jpg)'];
-    //let counter = 0;
 
     useEffect(() => {
         const intervalID = setInterval(() =>  {
