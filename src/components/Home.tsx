@@ -1,5 +1,6 @@
 import '../styles/home.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function Home() {
     const events = [
@@ -36,11 +37,35 @@ function Home() {
             resultName: 'Cedar Island 5k Swim',
             resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000'
         }
-    ]
+    ];
+
+    const [dynamicBackgroundImage, setDynamicBackgroundImage] = useState('url(https://res.cloudinary.com/dvmw658s9/image/upload/v1693969286/SJ%20Race%20Timing/bht20hf1gdnefszac736.webp)');
+    const [counter, setCounter] = useState(0);
+
+    const backgroundImages = ['url(https://res.cloudinary.com/dvmw658s9/image/upload/v1693883508/SJ%20Race%20Timing/qexfakhgqxaughlxoaze.jpg)', 
+    'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1693969286/SJ%20Race%20Timing/bht20hf1gdnefszac736.webp)',
+     'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1693880283/SJ%20Race%20Timing/gyrk7mzuutrns1ntgkvx.webp)'];
+    //let counter = 0;
+
+    useEffect(() => {
+        const intervalID = setInterval(() =>  {
+            console.log(counter);
+            console.log(dynamicBackgroundImage);
+            if (counter < 2) {
+                setDynamicBackgroundImage(backgroundImages[counter]);
+                setCounter(counter + 1);
+            } else if (counter === 2) {
+                setDynamicBackgroundImage(backgroundImages[counter]);
+                setCounter(0);
+            }
+        }, 2000);
+    
+        return () => clearInterval(intervalID);
+    }), [];
 
     return (
         <>
-            <div id='homePageBackground'>
+            <div id='homePageBackground' style={{backgroundImage: dynamicBackgroundImage}}>
                 <div id='buttonWrapper'>
                     <button className='button topHome'>FIND A RACE</button>
                     <button className='button topHome'>SEE RESULTS</button>
@@ -63,7 +88,7 @@ function Home() {
                         {events.map((event) => {
                             return (
                                 <>
-                                    <div className='eventWrapper'>
+                                    <div className='eventWrapper' key={event.eventName}>
                                         <h2 className='eventDate'>{event.eventDate}</h2>
                                         <div className='eventItemDateWrapper'>
                                             <h2 className='eventDay'>{event.eventDay}</h2>
@@ -82,7 +107,7 @@ function Home() {
                         {results.map((result) => {
                             return (
                                 <>
-                                    <div className='resultsWrapper'>
+                                    <div className='resultsWrapper' key={result.resultName}>
                                         <a href={result.resultLink} target='_blank' className='resultLink'>{result.resultName}</a>
                                     </div>
                                 </>
@@ -144,8 +169,8 @@ function Home() {
                         <h2 id='contactHomeTitle'>CONTACT US</h2>
                         <form id='contactFormHome'>
                             <input type='text' name='name' className='contactInputHome' placeholder='Full Name'/>
-                            <select className='contactSelectHome' name='contactType'>
-                                <option value='none' selected disabled hidden>Choose from Dropdown</option>
+                            <select className='contactSelectHome' name='contactType' defaultValue={'none'}>
+                                <option value='none' disabled hidden>Choose from Dropdown</option>
                                 <option value="Race Director">Race Director</option>
                                 <option value="Runner">Runner</option>
                                 <option value="N/A">N/A</option>

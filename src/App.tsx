@@ -7,7 +7,6 @@ import PageNotFound from './components/PageNotFound';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
-
   window.addEventListener('scroll', fadeIn);
 
   function fadeIn() {
