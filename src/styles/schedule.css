@@ -1,0 +1,148 @@
+#schedulePageBackground {
+    background-image: url('https://res.cloudinary.com/dvmw658s9/image/upload/v1694020064/SJ%20Race%20Timing/av8msxn695ipcbzmmod9.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 85vh;
+    text-align: left;
+    transition: 1s ease-in-out;
+}
+
+#fullEventsWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 20%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.largeEventWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.eventDateLarge {
+    color: rgb(39, 56, 131);
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+}
+
+.eventDayLarge {
+    font-size: 22px;
+    color: rgb(117, 133, 210);
+}
+
+.eventMonthLarge { 
+    font-size: 22px;
+    color: rgb(39, 56, 131);
+}
+
+.eventNameLocationLarge {
+    font-size: 25px;
+    height: 50px;
+    color: rgb(39, 56, 131);
+}
+
+.eventLocationLarge {
+    font-size: 22px;
+    color: black;
+}
+
+.eventWrapper:hover .eventDateLarge {
+    translate: -500%;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+  
+.eventWrapper:hover .eventItemDateWrapperLarge {
+    translate: -500%;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+  
+.eventWrapper:hover .eventNameLocationLarge {
+    translate: -20%;
+    width: 100%;
+}
+
+#eventDatesWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 20%;
+}
+
+.eventNameLocationLarge {
+    text-align: left;
+    width: 80%;
+    height: 30px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+@media (max-width: 600px) {
+    #fullEventsWrapper {      
+        margin-inline: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .largeEventWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      max-width: 100%;
+      max-height: 50px;
+      padding-bottom: 5%;
+      margin-bottom: 5%;
+      border-bottom: solid 2px rgb(255, 0, 128);
+      transition: 0.5s;
+    }
+  
+    .largeEventWrapper .button {
+      font-size: 12px;
+      padding: 5px;
+    }
+  
+    .eventDayLarge {
+      font-size: 14px;
+    }
+    
+    .eventMonthLarge {
+      font-size: 14px;
+    }
+    
+    .eventDateLarge {
+      font-size: 25px;
+      margin-top: 10px;
+    }
+
+    .eventNameLocationLarge {
+        font-size: 16px;
+        height: 50px;
+        width: 60%;
+        color: black;
+    }
+    
+    .eventLocationLarge {
+        font-size: 14px;
+        color: black;
+    }
+
+    .eventItemDateWrapperLarge {
+        position: relative;
+        top: 12px;
+    }
+
+    #eventDatesWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 20%;
+    }
+}

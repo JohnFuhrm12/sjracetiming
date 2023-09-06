@@ -168,10 +168,12 @@
     #logoImg {
         max-width: 25%;
         padding: 2%;
+        margin-left: -15px;
     }
 
     #hamburgerMenu {
         margin-left: 0%;
+        margin-right: 2%;
     }
 
     #hamburgerMenu:before,

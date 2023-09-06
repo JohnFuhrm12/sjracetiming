@@ -2,6 +2,7 @@ import './styles/App.css';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Schedule from './components/Schedule';
 import PageNotFound from './components/PageNotFound';
 
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -30,6 +31,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={ <Home/> }/>
+        <Route path="/schedule" element={ <Schedule/> }/>
         <Route path="/404" element={ <PageNotFound/> }/>
         <Route path="*" element={ <Navigate to="/404"/>}/>
       </Routes>

@@ -27,6 +27,7 @@
 
 #buttonWrapper button {
     margin-inline: 1%;
+    font-weight: bold;
 }
 
 #servicesBlocksWrapper {
@@ -195,8 +196,13 @@
     }
 
     #homePageBackground {
-        height: 90vh;
+        height: 80vh;
         background-attachment: scroll;
+    }
+
+    #contactBlockHome {
+        height: 100vh;
+        background-attachment: local;
     }
   }
 
@@ -211,7 +217,7 @@
 
     #homePageBackground {
         height: 90vh;
-        background-attachment: scroll;
+        background-attachment: local;
     }
 
     #title {
@@ -234,7 +240,7 @@
         justify-content: space-around;
         width: 40%;
         position: relative;
-        top: 80%;
+        top: 75%;
         left: 55%;
     }
 
@@ -242,6 +248,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin-left: 3%;
     }
 
     .servicesInfoWrapper {
@@ -275,8 +282,8 @@
 
     #logoContactBlock {
         position: relative;
-        max-width: 200px;
-        max-height: 150px;
+        max-width: 180px;
+        max-height: 130px;
         top: 30px;
         left: 0px;
         margin: 0 auto;
@@ -289,11 +296,11 @@
     #contactHomeTitle {
         font-size: 25px;
         margin-top: 15%;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 
     #contactFormHome {
-        gap: 8px;
+        gap: 4px;
     }
 
     .contactInputHome {

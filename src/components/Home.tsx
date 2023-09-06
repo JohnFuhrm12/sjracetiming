@@ -48,8 +48,6 @@ function Home() {
 
     useEffect(() => {
         const intervalID = setInterval(() =>  {
-            console.log(counter);
-            console.log(dynamicBackgroundImage);
             if (counter < 2) {
                 setDynamicBackgroundImage(backgroundImages[counter]);
                 setCounter(counter + 1);
