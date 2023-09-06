@@ -1,4 +1,5 @@
 import '../styles/home.css';
+import { Link } from 'react-router-dom';
 
 function Home() {
     const events = [
@@ -12,13 +13,13 @@ function Home() {
             eventLink: 'https://runsignup.com/Race/NJ/SomersPoint/TheRuntoRemember5K'
         },
         {
-            eventName: 'The Cherry Hill 5K',
+            eventName: 'Katz JCC Kids Traithlon',
             eventLocation: 'Cherry Hill',
-            eventDate: '12',
-            eventDay: 'Mon',
+            eventDate: '10',
+            eventDay: 'Sun',
             eventMonth: 'Sep',
             dateTime: new Date('2017-12-23'),
-            eventLink: 'https://runsignup.com/Race/NJ/SomersPoint/TheRuntoRemember5K'
+            eventLink: 'https://runsignup.com/Race/NJ/CherryHill/KatzJCCKidsTri'
         }
     ];
 
@@ -76,6 +77,7 @@ function Home() {
                                 </>
                             )
                         })}
+                        <Link to='/' className='seeAllLink'>See Full Schedule</Link>
                     </div>
                     <div id='resultsBlock'>
                         <h2 className='subtitleBlue'><span className='pinkSubtitle'>Recent</span> Results</h2>
@@ -88,6 +90,7 @@ function Home() {
                                 </>
                             )
                         })}
+                        <Link to='/' className='seeAllLink'>See All Results</Link>
                     </div>
                 </div>
             </div>
@@ -135,6 +138,27 @@ function Home() {
                             </ul>
                         </div>
                     </div>
+            </div>
+            <div id='contactBlockHome'>
+                <div id='contactLogoFormHomeWrapper'>
+                    <img id='logoContactBlock' src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693969389/SJ%20Race%20Timing/g1jzajm3pzy0uzfjyvca.webp' alt='South Jersey Race Timing'/>
+                    <div id='contactFormBlockHome'>
+                        <h2 id='contactHomeTitle'>Contact Us</h2>
+                        <form id='contactFormHome'>
+                            <input type='text' name='name' className='contactInputHome' placeholder='Full Name'/>
+                            <select className='contactSelectHome' name='contactType'>
+                                <option value='none' selected disabled hidden>Choose from Dropdown</option>
+                                <option value="Race Director">Race Director</option>
+                                <option value="Runner">Runner</option>
+                                <option value="N/A">N/A</option>
+                            </select>
+                            <input type='text' name='email' className='contactInputHome' placeholder='youremail@gmail.com'/>
+                            <input type='text' name='phone' className='contactInputHome' placeholder='Phone Number'/>
+                            <textarea name='name' className='contactTextAreaHome' placeholder='Send us a Message!'/>
+                            <button id='contactFormHomeButton' className='button' type='submit'>Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </>
     )

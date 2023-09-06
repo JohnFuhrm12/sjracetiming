@@ -4,7 +4,6 @@
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
     width: 100vw;
     height: 85vh;
     text-align: left;
@@ -66,6 +65,106 @@
   
 #resultsBlock {
     width: 45%;
+}
+
+.seeAllLink {
+    font-size: 30px;
+    color: white;
+    border-bottom: solid 3px transparent;
+    transition: 0.5s;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    text-decoration: none;
+}
+
+.seeAllLink:hover {
+    cursor: pointer;
+    border-bottom: solid 3px rgb(255, 0, 128);
+    transition: 0.5s;
+}
+
+#contactBlockHome{
+    background-image: url('https://res.cloudinary.com/dvmw658s9/image/upload/v1693969286/SJ%20Race%20Timing/bht20hf1gdnefszac736.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 80vh;
+    text-align: left;
+}
+
+#contactLogoFormHomeWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#logoContactBlock {
+    position: relative;
+    max-width: 500px;
+    max-height: 400px;
+    top: 100px;
+    left: -5%;
+}
+
+#contactFormBlockHome {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+
+#contactHomeTitle {
+    font-size: 50px;
+    color: rgb(43, 59, 131);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#contactFormHome {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contactInputHome {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+    outline: none;
+}
+
+.contactSelectHome {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+    outline: none;
+}
+
+.contactSelectHome:hover {
+    cursor: pointer;
+}
+
+.contactTextAreaHome {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+    outline: none;
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contactFormHomeButton {
+    max-width: 40%;
+    position: relative;
+    left: 60%;
 }
 
 @media (max-width: 900px) {

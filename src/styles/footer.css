@@ -2,7 +2,6 @@
     border-top: solid 7px transparent;
     border-image: linear-gradient(0.10turn, rgba(255,0,128), rgb(15, 43, 170), rgba(89, 0, 255, 0));
     border-image-slice: 1;
-    margin-top: 15%;
 }
 
 #sponsorImgWrapper {
