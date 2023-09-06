@@ -20,7 +20,7 @@
   background-color: rgb(255, 0, 128);
   transition: 0.5s;
   border: solid 2px rgb(255, 0, 128);
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.521);
   color: white;
 }
@@ -39,6 +39,7 @@
 
 .infoBlock {
   margin-inline: 15%;
+  margin-bottom: 5%;
 }
 
 .infoBlockBlue {
@@ -76,6 +77,11 @@
 .subtitleBlueSmall {
   font-size: 30px;
   color: white;
+}
+
+.subtitleBluePinkSmall {
+  font-size: 30px;
+  color: rgb(255, 0, 128);
 }
 
 .paragraphsWrapper {
