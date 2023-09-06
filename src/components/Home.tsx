@@ -20,6 +20,21 @@ function Home() {
             dateTime: new Date('2017-12-23'),
             eventLink: 'https://runsignup.com/Race/NJ/SomersPoint/TheRuntoRemember5K'
         }
+    ];
+
+    const results = [
+        {
+            resultName: 'Book Smiles 5k',
+            resultLink: 'https://runsignup.com/Race/Results/146264/?resultSetId=401291#resultSetId-401291;perpage:2000'
+        },
+        {
+            resultName: 'SHPOA Harbor Hustle 5K',
+            resultLink: 'https://runsignup.com/Race/Results/148627#resultSetId-399623;perpage:2000'
+        },
+        {
+            resultName: 'Cedar Island 5k Swim',
+            resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000'
+        }
     ]
 
     return (
@@ -43,22 +58,38 @@ function Home() {
                 <p className='infoParagraph'>We take pride in our work and look forward to speaking with you. Take a look at our services or simply contact us today.</p>
             </div>
             <div className='infoBlockBlue'>
-                <h2 className='subtitleBlue'><span className='pinkSubtitle'>Upcoming</span> Events</h2>
-                {events.map((event) => {
-                    return (
-                        <>
-                            <div className='eventWrapper'>
-                                <h2 className='eventDate'>{event.eventDate}</h2>
-                                <div className='eventItemDateWrapper'>
-                                    <h2 className='eventDay'>{event.eventDay}</h2>
-                                    <h2 className='eventMonth'>{event.eventMonth}</h2>
-                                </div>
-                                <h2 className='eventNameLocation'>{event.eventName}<span className='slash'> / </span><span className='eventLocation'>{event.eventLocation}</span></h2>
-                                <button className='button'><a href={event.eventLink} target='_blank'>Register</a></button>
-                            </div>
-                        </>
-                    )
-                })}
+                <div className='eventsResultsWrapper'>
+                    <div id='eventsBlock'>
+                        <h2 className='subtitleBlue'><span className='pinkSubtitle'>Upcoming</span> Events</h2>
+                        {events.map((event) => {
+                            return (
+                                <>
+                                    <div className='eventWrapper'>
+                                        <h2 className='eventDate'>{event.eventDate}</h2>
+                                        <div className='eventItemDateWrapper'>
+                                            <h2 className='eventDay'>{event.eventDay}</h2>
+                                            <h2 className='eventMonth'>{event.eventMonth}</h2>
+                                        </div>
+                                        <h2 className='eventNameLocation'>{event.eventName}<span className='slash'> / </span><span className='eventLocation'>{event.eventLocation}</span></h2>
+                                        <button className='button'><a href={event.eventLink} target='_blank'>Register</a></button>
+                                    </div>
+                                </>
+                            )
+                        })}
+                    </div>
+                    <div id='resultsBlock'>
+                        <h2 className='subtitleBlue'><span className='pinkSubtitle'>Recent</span> Results</h2>
+                        {results.map((result) => {
+                            return (
+                                <>
+                                    <div className='resultsWrapper'>
+                                        <a href={result.resultLink} target='_blank' className='resultLink'>{result.resultName}</a>
+                                    </div>
+                                </>
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
             <div className='infoBlock fade'>
                 <h2 className='subtitle'><span className='pinkSubtitle'>Our</span> Services</h2>

@@ -60,6 +60,14 @@
     left: 85%;
 }
 
+#eventsBlock {
+    width: 45%;
+}
+  
+#resultsBlock {
+    width: 45%;
+}
+
 @media (max-width: 900px) {
     #homePageBackground {
         height: 60vh;

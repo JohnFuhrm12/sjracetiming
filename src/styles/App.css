@@ -113,12 +113,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 42%;
+  max-width: 100%;
   max-height: 50px;
-  padding-bottom: 2%;
-  margin-bottom: 2%;
+  padding-bottom: 5%;
+  margin-bottom: 5%;
   border-bottom: solid 2px rgb(255, 0, 128);
   transition: 0.5s;
+}
+
+.eventsResultsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .eventWrapper:hover {
@@ -186,6 +192,31 @@
   color: white;
   font-size: 18px;
   font-weight: 300;
+}
+
+.resultsWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-inline: 30%;
+  width: 80%;
+}
+
+.resultLink {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 2%;
+  width: fit-content;
+  padding-bottom: 2%;
+  border-bottom: solid 3px transparent;
+  transition: 0.5s;
+}
+
+.resultLink:hover {
+  color: rgb(255, 0, 128);
+  border-bottom: solid 3px rgb(255, 0, 128);
+  transition: 0.5s;
 }
 
 @media (max-width: 600px) {
