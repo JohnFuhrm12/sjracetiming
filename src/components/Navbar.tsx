@@ -42,8 +42,11 @@ function Navbar() {
                 </label>
             </div>
             <div id='hamburgerNav'>
-                <Link to='/' className='mobileNavLink' onClick={closeNav}>Link1</Link>
-                <Link to='/' className='mobileNavLink' onClick={closeNav}>Link2</Link>
+                <Link to='/about' className='mobileNavLink' onClick={closeNav}>About</Link>
+                <Link to='/services' className='mobileNavLink' onClick={closeNav}>Services</Link>
+                <Link to='/schedule' className='mobileNavLink' onClick={closeNav}>Schedule</Link>
+                <Link to='/results' className='mobileNavLink' onClick={closeNav}>Results</Link>
+                <Link to='/contact' className='mobileNavLink' onClick={closeNav}>Contact</Link>
             </div>
         </>
     )

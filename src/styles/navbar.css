@@ -109,8 +109,8 @@
     position: relative;
     z-index: 3;
     transition: 200ms ease-in-out;
-    height: 300px;
-    margin-bottom: -300px;
+    height: 250px;
+    margin-bottom: -250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -120,7 +120,7 @@
     cursor: pointer;
     margin: 0;
     font-size: 24px;
-    margin-bottom: 1%;
+    margin-bottom: 0.5%;
     transition: 0.5s;
     text-decoration: none;
     color: white;
