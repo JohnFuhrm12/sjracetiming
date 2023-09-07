@@ -1,0 +1,20 @@
+#pageNotFound {
+    font-size: 40px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+#errorRed {
+    color: rgb(179, 32, 32);
+}
+
+#cantFind {
+    font-size: 30px;
+    margin-bottom: 30%;
+}
+
+@media (max-width: 600px) { 
+    #cantFind {
+        margin-bottom: 100%;
+    }
+}

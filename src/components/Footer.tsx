@@ -5,12 +5,22 @@ function Footer() {
         <>
             <div id='footerWrapper'>
                 <div id='sponsorImgWrapper'>
-                    <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891296/SJ%20Race%20Timing/lm9mg9nllahm0ecuctlz.jpg' className='sponsorImg' alt='Pineland Striders'/>
-                    <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891297/SJ%20Race%20Timing/unaejbz9ggqv90fnk4ig.png' className='sponsorImg' alt='Chrono Track'/>
+                    <a href='http://www.pinelandstriders.com/' target='_blank'>
+                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891296/SJ%20Race%20Timing/lm9mg9nllahm0ecuctlz.jpg' className='sponsorImg' alt='Pineland Striders'/>
+                    </a>
+                    <a href='https://chronotrack.com/' target='_blank'>
+                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891297/SJ%20Race%20Timing/unaejbz9ggqv90fnk4ig.png' className='sponsorImg' alt='Chrono Track'/>
+                    </a>
                     <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693880283/SJ%20Race%20Timing/gyrk7mzuutrns1ntgkvx.webp' className='sponsorImg' alt='South Jersey Race Timing'/>
-                    <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891297/SJ%20Race%20Timing/hmydnvu0dbf8k1jgdvdn.webp' className='sponsorImg' alt='Run SignUp'/>
-                    <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891300/SJ%20Race%20Timing/tdluswydzb7gn7k7iihd.webp' className='sponsorImg' alt='Second Capital Running'/>
-                    <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891301/SJ%20Race%20Timing/kndzr2lvtzlnuh0ninac.webp' className='sponsorImg' alt='Medford NJ Milers'/>
+                    <a href='https://runsignup.com/' target='_blank'>
+                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891297/SJ%20Race%20Timing/hmydnvu0dbf8k1jgdvdn.webp' className='sponsorImg' alt='Run SignUp'/>
+                    </a>
+                    <a href='https://www.secondcapitalrunning.com/' target='_blank'>
+                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891300/SJ%20Race%20Timing/tdluswydzb7gn7k7iihd.webp' className='sponsorImg' alt='Second Capital Running'/>
+                    </a>
+                    <a href='http://www.medfordnjmilers.com/' target='_blank'>
+                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891301/SJ%20Race%20Timing/kndzr2lvtzlnuh0ninac.webp' className='sponsorImg' alt='Medford NJ Milers'/>
+                    </a>
                 </div>
                 <div id='footerLinksSmallWrapper'>
                     <a className='footerLinkSmall'>Terms and Conditions</a>

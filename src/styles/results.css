@@ -17,32 +17,39 @@
 
 .yearBlock {
     margin: 0 auto;
-    margin-inline: 5%;
-    margin-bottom: 10%;
+    margin-inline: 2%;
+    margin-bottom: 2%;
     padding-bottom: 2%;
-    border-bottom: solid 2px black;
 }
 
-.monthsBlocksWrapper {
+.yearBorder {
+    width: 80vw;
+    height: 1px;
+    margin: 0 auto;
+    border-bottom: solid 2px black;
+    margin-bottom: 8%;
+}
+
+.monthsBlockFour {
     display: flex;
     flex-direction: row;
-    margin-inline: 5%;
-    text-align: left;
     justify-content: space-around;
-    margin-left: 28%;
-}
-
-.monthsBlock {
-    width: 50%;
 }
 
 .monthTitle {
     font-size: 30px;
 }
 
+.resultsBlock {
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
 .resultsWrapperSmall {
     display: flex;
     flex-direction: row;
+    text-align: left;
 }
 
 .resultDivider {
@@ -50,7 +57,7 @@
 }
 
 .resultName {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: rgb(39, 56, 131);
     border-bottom: solid 3px transparent;
@@ -75,22 +82,28 @@
   }
 
 @media (max-width: 600px) {
-    .monthsBlocksWrapper {
-        display: flex;
-        flex-direction: column;
-        margin-left: 5%;
-    }
-
-    .monthsBlock {
-        width: 100%;
-    }
-
     .yearTitle {
         font-size: 30px;
+        text-align: left;
+    }
+
+    .monthsBlockFour {
+        display: flex;
+        flex-direction: column;
     }
 
     .monthTitle {
         font-size: 22px;
+    }
+
+    .resultsBlock {
+        text-align: left;
+    }
+
+    .resultsWrapperSmall {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
     }
 
     .resultName {

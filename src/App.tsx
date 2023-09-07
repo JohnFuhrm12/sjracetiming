@@ -9,6 +9,8 @@ import Results from './components/Results';
 import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
 
+import Admin from './components/Admin';
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
         <Route path="/schedule" element={ <Schedule/> }/>
         <Route path="/results" element={ <Results/> }/>
         <Route path="/contact" element={ <Contact/> }/>
+        <Route path="/admin" element={ <Admin/> }/>
         <Route path="/404" element={ <PageNotFound/> }/>
         <Route path="*" element={ <Navigate to="/404"/>}/>
       </Routes>
