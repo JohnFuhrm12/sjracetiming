@@ -15,11 +15,12 @@
 } 
 
 .title {
-  font-size: 45px;
+  font-size: 30px;
   margin: 0 auto;
   width: fit-content;
   position: relative;
-  top: 25%;
+  top: 5%;
+  right: 42%;
   padding: 1%;
   padding-inline: 1.5%;
   color: white;
@@ -233,6 +234,17 @@
   transition: 0.5s;
 }
 
+.legalWrapper {
+  text-align: left;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-inline: 15%;
+}
+
+.legalText {
+  font-size: 16px;
+}
+
 @media (max-width: 600px) {
   .infoBlock {
     margin-inline: 5%;
@@ -241,6 +253,21 @@
   .infoParagraph {
     text-align: left;
     font-size: 18px;
+  }
+
+  .title {
+    font-size: 30px;
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+    top: 5%;
+    right: 25%;
+    padding: 1%;
+    padding-inline: 1.5%;
+    color: white;
+    background-color: rgba(47, 68, 161, 0.908);
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.521);
+    border-radius: 5px;
   }
 
   .subtitle {

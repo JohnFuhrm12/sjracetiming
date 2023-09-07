@@ -39,7 +39,7 @@ function Home() {
         }
     ];
 
-    const [dynamicBackgroundImage, setDynamicBackgroundImage] = useState('');
+    const [dynamicBackgroundImage, setDynamicBackgroundImage] = useState('url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694019957/SJ%20Race%20Timing/e00x6odujttar6bxntsm.jpg)');
     const [counter, setCounter] = useState(0);
 
     const backgroundImages = ['url(https://res.cloudinary.com/dvmw658s9/image/upload/v1693883508/SJ%20Race%20Timing/qexfakhgqxaughlxoaze.jpg)', 

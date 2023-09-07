@@ -8,6 +8,8 @@ import Schedule from './components/Schedule';
 import Results from './components/Results';
 import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
+import Terms from './components/Terms';
+import Privacy from './components/Privacy';
 
 import Admin from './components/Admin';
 
@@ -42,6 +44,8 @@ function App() {
         <Route path="/schedule" element={ <Schedule/> }/>
         <Route path="/results" element={ <Results/> }/>
         <Route path="/contact" element={ <Contact/> }/>
+        <Route path="/terms" element={ <Terms/> }/>
+        <Route path="/privacy" element={ <Privacy/> }/>
         <Route path="/admin" element={ <Admin/> }/>
         <Route path="/404" element={ <PageNotFound/> }/>
         <Route path="*" element={ <Navigate to="/404"/>}/>

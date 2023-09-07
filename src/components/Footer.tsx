@@ -1,4 +1,5 @@
 import '../styles/footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -23,8 +24,13 @@ function Footer() {
                     </a>
                 </div>
                 <div id='footerLinksSmallWrapper'>
-                    <a className='footerLinkSmall'>Terms and Conditions</a>
-                    <a className='footerLinkSmall'>Privacy Policy</a>
+                    <Link to='/terms' className='footerLinkSmall'>Terms and Conditions</Link>
+                    <Link to='/privacy' className='footerLinkSmall'>Privacy Policy</Link>
+                    <a href='https://sierranevadawebdesigns.com/' className='footerLinkSmall'>Design</a>
+                </div>
+                <div id='footerLinksSmallWrapper'>
+                    <p className='footerLinkSmall'>609-206-7555</p>
+                    <p className='footerLinkSmall'>runner1311@verizon.net</p>
                 </div>
                 <p id='copyright'>Copyright © 2023 | South Jersey Race Timing LLC | All Rights Reserved</p>
             </div>
