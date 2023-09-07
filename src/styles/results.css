@@ -16,9 +16,11 @@
 }
 
 .yearBlock {
-    margin-inline: 5%;
     margin: 0 auto;
-    margin-bottom: 5%;
+    margin-inline: 5%;
+    margin-bottom: 10%;
+    padding-bottom: 2%;
+    border-bottom: solid 2px black;
 }
 
 .monthsBlocksWrapper {
@@ -28,7 +30,6 @@
     text-align: left;
     justify-content: space-around;
     margin-left: 28%;
-
 }
 
 .monthsBlock {

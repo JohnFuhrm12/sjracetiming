@@ -31,7 +31,7 @@ function Schedule() {
             {events.map((event) => {
                             return (
                     <>
-                        <div className='eventWrapper largeEventWrapper' key={event.eventName}>
+                        <div className='eventWrapper largeEventWrapper fade' key={event.eventName}>
                             <div id='eventDatesWrapper'>
                                 <h2 className='eventDate eventDateLarge'>{event.eventDate}</h2>
                                     <div className='eventItemDateWrapper eventItemDateWrapperLarge'>

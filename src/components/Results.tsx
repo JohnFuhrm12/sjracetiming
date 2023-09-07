@@ -93,7 +93,7 @@ function Results() {
             {years.map((year) => {
                 return (
                     <>
-                        <div className='yearBlock'>
+                        <div className='yearBlock fade'>
                             <h2 className='yearTitle'>{year}</h2>
                             <div className='monthsBlocksWrapper'>
                                 <div className='monthsBlock'>
