@@ -1,0 +1,98 @@
+#resultsPageBackground {
+    background-image: url('https://res.cloudinary.com/dvmw658s9/image/upload/v1694020064/SJ%20Race%20Timing/av8msxn695ipcbzmmod9.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 85vh;
+    text-align: left;
+    transition: 1s ease-in-out;
+}
+
+.yearTitle {
+    font-size: 40px;
+    color: rgb(255, 0, 128);
+}
+
+.yearBlock {
+    margin-inline: 5%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.monthsBlocksWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-inline: 5%;
+    text-align: left;
+    justify-content: space-around;
+    margin-left: 28%;
+
+}
+
+.monthsBlock {
+    width: 50%;
+}
+
+.monthTitle {
+    font-size: 30px;
+}
+
+.resultsWrapperSmall {
+    display: flex;
+    flex-direction: row;
+}
+
+.resultDivider {
+    margin-inline: 2%;
+}
+
+.resultName {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(39, 56, 131);
+    border-bottom: solid 3px transparent;
+    padding-bottom: 2%;
+    transition: 0.5s;
+    text-decoration: none;
+    margin-bottom: 2%;
+}
+
+.resultName:hover {
+    color: rgb(255, 0, 128);
+    border-bottom: solid 3px rgb(255, 0, 128);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .monthsBlocksWrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    .monthsBlock {
+        width: 100%;
+    }
+
+    .yearTitle {
+        font-size: 30px;
+    }
+
+    .monthTitle {
+        font-size: 22px;
+    }
+
+    .resultName {
+        font-size: 14px;
+        font-weight: bold;
+        color: rgb(39, 56, 131);
+        border-bottom: solid 3px transparent;
+        padding-bottom: 2%;
+        transition: 0.5s;
+        text-decoration: none;
+        margin-bottom: 2%;
+    }
+}

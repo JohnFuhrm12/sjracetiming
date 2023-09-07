@@ -19,6 +19,7 @@
     min-width: 100px;
     max-width: 35%;
     padding: 5%;
+    margin-left: -40%;
 }
 
 #navLinksWrapper {
@@ -158,7 +159,7 @@
 
 @media (max-width: 600px) {
     #logoWrapper {
-        margin-left: -25%;
+        margin-left: -35%;
     }
 
     .navLink {
@@ -168,7 +169,7 @@
     #logoImg {
         max-width: 25%;
         padding: 2%;
-        margin-left: -15px;
+        margin-left: -55px;
     }
 
     #hamburgerMenu {

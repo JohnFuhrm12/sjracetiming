@@ -25,15 +25,17 @@ function Navbar() {
     return (
         <>
             <div className='wrapper'>
+                <Link id='logoLink' to='/'>
                     <div id='logoWrapper'>
                         <img id='logoImg' src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693880283/SJ%20Race%20Timing/gyrk7mzuutrns1ntgkvx.webp' alt='SJ Race Timing Logo'/>
                     </div>
+                </Link>
                 <div id='navLinksWrapper'>
-                    <Link to='/' className='navLink'>About</Link>
-                    <Link to='/' className='navLink'>Services</Link>
+                    <Link to='/about' className='navLink'>About</Link>
+                    <Link to='/services' className='navLink'>Services</Link>
                     <Link to='/schedule' className='navLink'>Schedule</Link>
-                    <Link to='/' className='navLink'>Results</Link>
-                    <Link to='/' className='navLink'>Contact</Link>
+                    <Link to='/results' className='navLink'>Results</Link>
+                    <Link to='/contact' className='navLink'>Contact</Link>
                 </div>
                 <label id='hamburgerMenu' onClick={MobileNavAnimation}>
                     <input id='menuCheck' type='checkbox'/>

@@ -97,7 +97,7 @@ function Home() {
                                 </>
                             )
                         })}
-                        <Link to='/' className='seeAllLink'>SEE FULL SCHEDULE</Link>
+                        <Link to='/schedule' className='seeAllLink'>SEE FULL SCHEDULE</Link>
                     </div>
                     <div id='resultsBlock'>
                         <h2 className='subtitleBlue'><span className='pinkSubtitle'>RECENT</span> RESULTS</h2>
@@ -110,7 +110,7 @@ function Home() {
                                 </>
                             )
                         })}
-                        <Link to='/' className='seeAllLink'>SEE ALL RESULTS</Link>
+                        <Link to='/results' className='seeAllLink'>SEE ALL RESULTS</Link>
                     </div>
                 </div>
             </div>

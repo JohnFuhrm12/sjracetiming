@@ -30,21 +30,21 @@ function Schedule() {
             <div id='fullEventsWrapper'>
             {events.map((event) => {
                             return (
-                                <>
-                                    <div className='eventWrapper largeEventWrapper' key={event.eventName}>
-                                        <div id='eventDatesWrapper'>
-                                            <h2 className='eventDate eventDateLarge'>{event.eventDate}</h2>
-                                            <div className='eventItemDateWrapper eventItemDateWrapperLarge'>
-                                                <h2 className='eventDay eventDayLarge'>{event.eventDay}</h2>
-                                                <h2 className='eventMonth eventMonthLarge'>{event.eventMonth}</h2>
-                                            </div>
-                                        </div>
-                                        <h2 className='eventNameLocation eventNameLocationLarge'>{event.eventName}<span className='slash'> / </span><span className='eventLocation eventLocationLarge'>{event.eventLocation}</span></h2>                                                                             
-                                        <button className='button'><a href={event.eventLink} target='_blank'>Register</a></button>
+                    <>
+                        <div className='eventWrapper largeEventWrapper' key={event.eventName}>
+                            <div id='eventDatesWrapper'>
+                                <h2 className='eventDate eventDateLarge'>{event.eventDate}</h2>
+                                    <div className='eventItemDateWrapper eventItemDateWrapperLarge'>
+                                        <h2 className='eventDay eventDayLarge'>{event.eventDay}</h2>
+                                        <h2 className='eventMonth eventMonthLarge'>{event.eventMonth}</h2>
                                     </div>
-                                </>
-                            )
-                        })}
+                            </div>
+                            <h2 className='eventNameLocation eventNameLocationLarge'>{event.eventName}<span className='slash'> / </span><span className='eventLocation eventLocationLarge'>{event.eventLocation}</span></h2>                                                                             
+                            <button className='button'><a href={event.eventLink} target='_blank'>Register</a></button>
+                        </div>
+                    </>
+                )
+            })}
             </div>
         </>
     )
