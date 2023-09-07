@@ -197,7 +197,7 @@
 
     #homePageBackground {
         height: 80vh;
-        background-attachment: scroll;
+        background-attachment: local;
     }
 
     #contactBlockHome {

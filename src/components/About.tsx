@@ -3,7 +3,7 @@ import '../styles/about.css';
 function About() {
     return (
         <>
-            <div id='resultsPageBackground'>
+            <div id='aboutPageBackground'>
                 <h1 className='title'>ABOUT US</h1>
             </div>
             <div className='infoBlock fade'>

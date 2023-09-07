@@ -85,6 +85,13 @@
     transition: 0.5s;
 }
 
+@media (max-width: 900px) {
+    #schedulePageBackground {
+        height: 80vh;
+        background-attachment: local;
+    }
+  }
+
 @media (max-width: 600px) {
     #fullEventsWrapper {      
         margin-inline: 5%;

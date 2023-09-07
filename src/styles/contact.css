@@ -1,0 +1,6 @@
+@media (max-width: 900px) {
+    #contactPageBackground {
+        height: 80vh;
+        background-attachment: local;
+    }
+  }
