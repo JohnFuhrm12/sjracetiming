@@ -86,8 +86,8 @@ function Home() {
                     </Link>
                 </div>
                 <div id='socialIconsWrapperHomePage'>
-                    <a href="https://www.facebook.com/SouthJerseyRaceTimingLlc/" target='_blank' className="fa fa-facebook"></a>
-                    <a href="https://www.youtube.com/@southjerseyracetiming3314/featured" target='_blank' className="fa fa-youtube"></a>
+                    <a href="https://www.facebook.com/SouthJerseyRaceTimingLlc/" target='_blank' aria-label="Facebook" className="fa fa-facebook"></a>
+                    <a href="https://www.youtube.com/@southjerseyracetiming3314/featured" target='_blank' aria-label="YouTube" className="fa fa-youtube"></a>
                 </div>
             </div>
             <div className='infoBlock fade'>
@@ -185,7 +185,7 @@ function Home() {
                         <form id='contactFormHome' onSubmit={handleSubmit}>
                             <ValidationError prefix="Email" field="email" errors={state.errors}/>
                             <input type='text' name='name' className='contactInputHome' placeholder='Full Name' required/>
-                            <select className='contactSelectHome' name='contactType' defaultValue={'none'} required>
+                            <select className='contactSelectHome' name='contactType' defaultValue={'none'} aria-labelledby="contactType" required>
                                 <option value='none' disabled hidden>Choose from Dropdown</option>
                                 <option value="Race Director">Race Director</option>
                                 <option value="Runner">Runner</option>
