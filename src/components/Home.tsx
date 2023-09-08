@@ -44,12 +44,12 @@ function Home() {
     // Database Explanation: Events Hold All Seperated Date Information for Display and Regular Date to OrderBy next upcoming Race First
     // Results will grab Name for Display and The Link to Results Page and Date, Orderby Most recents Result First
 
-    const [dynamicBackgroundImage, setDynamicBackgroundImage] = useState('url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694145040/SJ%20Race%20Timing/umfyl7trrjuiluopp6f4.webp)');
+    const [dynamicBackgroundImage, setDynamicBackgroundImage] = useState('url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694145219/SJ%20Race%20Timing/pcn32e617n1c6chgtulj.webp)');
     const [counter, setCounter] = useState(0);
 
     const backgroundImages = ['url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694145040/SJ%20Race%20Timing/fmwekrpaz49x79s53svr.webp)', 
     'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694145040/SJ%20Race%20Timing/umfyl7trrjuiluopp6f4.webp)',
-     'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694145040/SJ%20Race%20Timing/umfyl7trrjuiluopp6f4.webp)'];
+     'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694145219/SJ%20Race%20Timing/pcn32e617n1c6chgtulj.webp)'];
 
     // Constantly Loop Through Background Images
     useEffect(() => {
