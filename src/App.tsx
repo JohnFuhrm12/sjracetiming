@@ -19,8 +19,7 @@ import { Routes, Route, Navigate, useLocation  } from 'react-router-dom';
 
 // Firebase Imports
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { doc, setDoc, deleteDoc  } from "firebase/firestore/lite"; 
+import { getFirestore } from 'firebase/firestore/lite';
 
 // Firebase configuration
 const firebaseConfig = {

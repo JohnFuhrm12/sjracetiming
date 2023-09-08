@@ -1,104 +1,73 @@
 import '../styles/results.css';
+import { useEffect, useState } from 'react';
+
+// Firebase Imports
+import { collection, getDocs } from 'firebase/firestore/lite';
 
 function Results( {...props} ) {
-    const results = [
-        {
-            resultMonth: 'August',
-            resultYear: '2023',
-            resultName: 'Book Smiles 5k',
-            resultLink: 'https://runsignup.com/Race/Results/146264/?resultSetId=401291#resultSetId-401291;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=iKf0rfMfyqE'
-        },
-        {
-            resultMonth: 'August',
-            resultYear: '2023',
-            resultName: 'SHPOA Harbor Hustle 5K',
-            resultLink: 'https://runsignup.com/Race/Results/148627#resultSetId-399623;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=tBVT-BP3Pq0'
-        },
-        {
-            resultMonth: 'August',
-            resultYear: '2023',
-            resultName: 'Cedar Island 5k Swim',
-            resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=tMwSDAn3k0w'
-        },
-        {
-            resultMonth: 'January',
-            resultYear: '2023',
-            resultName: 'Example January',
-            resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=tMwSDAn3k0w'
-        },
-        {
-            resultMonth: 'March',
-            resultYear: '2022',
-            resultName: 'Example March 2022',
-            resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=tMwSDAn3k0w'
-        },
-        {
-            resultMonth: 'February',
-            resultYear: '2023',
-            resultName: 'Example February 2023',
-            resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=tMwSDAn3k0w'
-        },
-        {
-            resultMonth: 'March',
-            resultYear: '2023',
-            resultName: 'Example March 2023',
-            resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=tMwSDAn3k0w'
-        },
-        {
-            resultMonth: 'April',
-            resultYear: '2023',
-            resultName: 'Example April 2023',
-            resultLink: 'https://runsignup.com/Race/Results/31081#resultSetId-399614;perpage:2000',
-            resultVideoLink: 'https://www.youtube.com/watch?v=tMwSDAn3k0w'
-        },
-    ];
+    const [results, setResults]: any[] = useState([]);
+    const [years, setYears] = useState(['2023', '2022']);
 
-    const resultsJanuary = results.filter(function(result) {
+    async function getResults(db:any) {
+        const resultsCol = collection(db, 'results');
+        const resultsSnapshot = await getDocs(resultsCol);
+        const results = resultsSnapshot.docs.map(doc => doc.data());
+        setResults(results);
+    };
+
+    async function getYears(db:any) {
+        const yearsCol = collection(db, 'years');
+        const yearsSnapshot = await getDocs(yearsCol);
+        const years = yearsSnapshot.docs.map(doc => doc.data());
+        setYears(years.map((year) => year.uid));
+    };
+
+    useEffect(() => {
+        getResults(props.db);
+        getYears(props.db);
+        console.log(years);
+    }, []);
+
+    const resultsJanuary = results.filter(function(result:any) {
         return (result.resultMonth === 'January');
     });
-    const resultsFebruary = results.filter(function(result) {
+    const resultsFebruary = results.filter(function(result:any) {
         return (result.resultMonth === 'February');
     });
-    const resultsMarch = results.filter(function(result) {
+    const resultsMarch = results.filter(function(result:any) {
         return (result.resultMonth === 'March');
     });
-    const resultsApril = results.filter(function(result) {
+    const resultsApril = results.filter(function(result:any) {
         return (result.resultMonth === 'April');
     });
-    const resultsMay = results.filter(function(result) {
+    const resultsMay = results.filter(function(result:any) {
         return (result.resultMonth === 'May');
     });
-    const resultsJune = results.filter(function(result) {
+    const resultsJune = results.filter(function(result:any) {
         return (result.resultMonth === 'June');
     });
 
-    const resultsJuly = results.filter(function(result) {
+    const resultsJuly = results.filter(function(result:any) {
         return (result.resultMonth === 'July');
     });
-    const resultsAugust = results.filter(function(result) {
+    const resultsAugust = results.filter(function(result:any) {
         return (result.resultMonth === 'August');
     });
-    const resultsSeptember = results.filter(function(result) {
+    const resultsSeptember = results.filter(function(result:any) {
         return (result.resultMonth === 'September');
     });
-    const resultsOctober = results.filter(function(result) {
+    const resultsOctober = results.filter(function(result:any) {
         return (result.resultMonth === 'October');
     });
-    const resultsNovember = results.filter(function(result) {
+    const resultsNovember = results.filter(function(result:any) {
         return (result.resultMonth === 'November');
     });
-    const resultsDecember = results.filter(function(result) {
+    const resultsDecember = results.filter(function(result:any) {
         return (result.resultMonth === 'December');
     });
 
-    const years = ['2023', '2022']
+    let yearsTest = ['2023', '2022', '2021'];
+    //yearsTest = years;
 
     // Database Explanation
     // Array of years with results
@@ -111,7 +80,7 @@ function Results( {...props} ) {
             <div id='resultsPageBackground'>
                 <h1 className='title'>RESULTS</h1>
             </div>
-            {years.map((year) => {
+            {yearsTest.map((year) => {
                 return (
                     <>
                         <div className='yearBlock fade'>
@@ -119,7 +88,7 @@ function Results( {...props} ) {
                                 <div className='monthsBlockFour'>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>January</h2>
-                                        {resultsJanuary.map((result) => {
+                                        {resultsJanuary.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -135,7 +104,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>February</h2>
-                                        {resultsFebruary.map((result) => {
+                                        {resultsFebruary.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -151,7 +120,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>March</h2>
-                                        {resultsMarch.map((result) => {
+                                        {resultsMarch.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -167,7 +136,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>April</h2>
-                                        {resultsApril.map((result) => {
+                                        {resultsApril.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -185,7 +154,7 @@ function Results( {...props} ) {
                                 <div className='monthsBlockFour'>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>May</h2>
-                                        {resultsMay.map((result) => {
+                                        {resultsMay.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -201,7 +170,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>June</h2>
-                                        {resultsJune.map((result) => {
+                                        {resultsJune.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -217,7 +186,7 @@ function Results( {...props} ) {
                                     </div>
                                 <div className='resultsBlock'>
                                         <h2 className='monthTitle'>July</h2>
-                                        {resultsJuly.map((result) => {
+                                        {resultsJuly.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -233,7 +202,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>August</h2>
-                                        {resultsAugust.map((result) => {
+                                        {resultsAugust.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -251,7 +220,7 @@ function Results( {...props} ) {
                                 <div className='monthsBlockFour'>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>September</h2>
-                                        {resultsSeptember.map((result) => {
+                                        {resultsSeptember.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -267,7 +236,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>October</h2>
-                                        {resultsOctober.map((result) => {
+                                        {resultsOctober.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -283,7 +252,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>November</h2>
-                                        {resultsNovember.map((result) => {
+                                        {resultsNovember.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 
@@ -299,7 +268,7 @@ function Results( {...props} ) {
                                     </div>
                                     <div className='resultsBlock'>
                                         <h2 className='monthTitle'>December</h2>
-                                        {resultsDecember.map((result) => {
+                                        {resultsDecember.map((result:any) => {
                                             return (
                                                 <>
                                                     {result.resultYear === year ? 

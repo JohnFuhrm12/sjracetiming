@@ -6,8 +6,8 @@ import { collection, getDocs } from 'firebase/firestore/lite';
 import { doc, setDoc, deleteDoc  } from "firebase/firestore/lite"; 
 
 function Admin( {...props} ) {
-    const [events, setEvents] = useState([]);
-    const [results, setResults] = useState([]);
+    const [events, setEvents]: any[] = useState([]);
+    const [results, setResults]: any[] = useState([]);
 
     async function getEvents(db:any) {
         const eventsCol = collection(db, 'events');
@@ -38,7 +38,7 @@ function Admin( {...props} ) {
     const [eventLink, setEventLink] = useState('');
 
     // Add a new Event
-    const addEvent = async (e) => {
+    const addEvent = async (e:any) => {
         e.preventDefault();
         await setDoc(doc(props.db, "events", `${eventName} - ${dateTime}`), {
             eventName: eventName,
@@ -60,7 +60,7 @@ function Admin( {...props} ) {
     const [resultVideoLink, setResultVideoLink] = useState('');
 
     // Add a new Result
-    const addResult = async (e) => {
+    const addResult = async (e:any) => {
         e.preventDefault();
         await setDoc(doc(props.db, "results", `${resultName} - ${resultYear}`), {
             resultName: resultName,
@@ -130,7 +130,7 @@ function Admin( {...props} ) {
                         <>
                             <div className='mappedItemsWrapper' key={event}>
                                 <a className='adminEventResult' href={event.eventLink}>{event.eventName}</a>
-                                <button className='deleteButton' onClick={(e:any) => deleteEvent(`${event.eventName} - ${event.dateTime}`)}>DELETE</button>
+                                <button className='deleteButton' onClick={() => deleteEvent(`${event.eventName} - ${event.dateTime}`)}>DELETE</button>
                             </div>
                         </>
                     )
@@ -144,7 +144,7 @@ function Admin( {...props} ) {
                             <div className='mappedItemsWrapper' key={result}>
                                 <a className='adminEventResult' href={result.resultLink}>{result.resultName}</a>
                                 <a className='adminEventResult adminVideo' href={result.resultVideoLink}>Video</a>
-                                <button className='deleteButton' onClick={(e:any) => deleteResult(`${result.resultName} - ${result.resultYear}`)}>DELETE</button>
+                                <button className='deleteButton' onClick={() => deleteResult(`${result.resultName} - ${result.resultYear}`)}>DELETE</button>
                             </div>
                         </>
                     )

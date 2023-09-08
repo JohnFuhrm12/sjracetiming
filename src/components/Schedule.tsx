@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore/lite';
 
 function Schedule( {...props} ) {
-    const [events, setEvents] = useState([]);
+    const [events, setEvents]: any[] = useState([]);
 
     async function getEvents(db:any) {
         const eventsCol = collection(db, 'events');
