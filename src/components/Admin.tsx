@@ -2,25 +2,10 @@ import '../styles/admin.css';
 import { useEffect, useState } from 'react';
 
 // Firebase Imports
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { collection, getDocs } from 'firebase/firestore/lite';
 import { doc, setDoc, deleteDoc  } from "firebase/firestore/lite"; 
 
-// Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAisxb90KdddmYBJPeieRFoKMMnDMNyY3s",
-  authDomain: "sj-race-timing.firebaseapp.com",
-  projectId: "sj-race-timing",
-  storageBucket: "sj-race-timing.appspot.com",
-  messagingSenderId: "821127727275",
-  appId: "1:821127727275:web:06bb89840cbf726db60fee"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-function Admin() {
+function Admin( {...props} ) {
     const [events, setEvents] = useState([]);
     const [results, setResults] = useState([]);
 
@@ -39,8 +24,8 @@ function Admin() {
     };
 
     useEffect(() => {
-        getEvents(db);
-        getResults(db);
+        getEvents(props.db);
+        getResults(props.db);
     }, []);
 
     // Event State
@@ -55,7 +40,7 @@ function Admin() {
     // Add a new Event
     const addEvent = async (e) => {
         e.preventDefault();
-        await setDoc(doc(db, "events", `${eventName} - ${dateTime}`), {
+        await setDoc(doc(props.db, "events", `${eventName} - ${dateTime}`), {
             eventName: eventName,
             eventLocation: eventLocation,
             eventMonth: eventMonth,
@@ -77,7 +62,7 @@ function Admin() {
     // Add a new Result
     const addResult = async (e) => {
         e.preventDefault();
-        await setDoc(doc(db, "results", `${resultName} - ${resultYear}`), {
+        await setDoc(doc(props.db, "results", `${resultName} - ${resultYear}`), {
             resultName: resultName,
             resultYear: resultYear,
             resultMonth: resultMonth,
@@ -93,13 +78,13 @@ function Admin() {
 
     // Delete Event
     const deleteEvent = async (id:string) => {
-        await deleteDoc(doc(db, "events", id));
+        await deleteDoc(doc(props.db, "events", id));
         reloadPage();
     };
 
     // Delete Result
     const deleteResult = async (id:string) => {
-        await deleteDoc(doc(db, "results", id));
+        await deleteDoc(doc(props.db, "results", id));
         reloadPage();
     };
 
@@ -112,10 +97,10 @@ function Admin() {
                 <input name='eventName' placeholder='Event Name' onChange={(e) => {setEventName(e.target.value)}} value={eventName} required/>
                 <label htmlFor='eventLocation'>Event Location:</label>
                 <input name='eventLocation' placeholder='Event Location' onChange={(e) => {setEventLocation(e.target.value)}} value={eventLocation} required/>
-                <label htmlFor='eventMonth'>Event Month:</label>
-                <input name='eventMonth' placeholder='Ex: January' onChange={(e) => {setEventMonth(e.target.value)}} value={eventMonth} required/>
-                <label htmlFor='eventWeekday'>Event Weekday:</label>
-                <input name='eventWeekday' placeholder='Ex: Monday' onChange={(e) => {setEventWeekday(e.target.value)}} value={eventWeekday} required/>
+                <label htmlFor='eventMonth'>Event Month (Jan):</label>
+                <input name='eventMonth' placeholder='Ex: Jan' onChange={(e) => {setEventMonth(e.target.value)}} value={eventMonth} required/>
+                <label htmlFor='eventWeekday'>Event Weekday (Mon):</label>
+                <input name='eventWeekday' placeholder='Ex: Mon' onChange={(e) => {setEventWeekday(e.target.value)}} value={eventWeekday} required/>
                 <label htmlFor='eventDay'>Event Day (Date):</label>
                 <input name='eventDay' placeholder='Ex: 12' onChange={(e) => {setEventDay(e.target.value)}} value={eventDay} required/>
                 <label htmlFor='dateTime'>Event Datetime (Year-Month-Day):</label>
@@ -138,27 +123,28 @@ function Admin() {
                 <input name='resultVideoLink' placeholder='Ex: https://www.youtube.com/watch?' onChange={(e) => {setResultVideoLink(e.target.value)}} value={resultVideoLink} required/>
                 <button className='button'>Add Result</button>
             </form>
-            <div id='testEventsDELETE'>
+            <div className='dbItemsWrapper'>
                 <h2>All EVENTS</h2>
                 {events.map((event:any) => {
                     return (
                         <>
-                            <div className='testKey' key={event}>
-                                <a href={event.eventLink}>{event.eventName}</a>
-                                <button onClick={(e:any) => deleteEvent(`${event.eventName} - ${event.dateTime}`)}>DELETE</button>
+                            <div className='mappedItemsWrapper' key={event}>
+                                <a className='adminEventResult' href={event.eventLink}>{event.eventName}</a>
+                                <button className='deleteButton' onClick={(e:any) => deleteEvent(`${event.eventName} - ${event.dateTime}`)}>DELETE</button>
                             </div>
                         </>
                     )
                 })}
             </div>
-            <div id='testResultsDELETE'>
+            <div className='dbItemsWrapper'>
                 <h2>All RESULTS</h2>
                 {results.map((result:any) => {
                     return (
                         <>
-                            <div className='testKey' key={result}>
-                                <h2>{result.resultName}</h2>
-                                <button onClick={(e:any) => deleteResult(`${result.resultName} - ${result.resultYear}`)}>DELETE</button>
+                            <div className='mappedItemsWrapper' key={result}>
+                                <a className='adminEventResult' href={result.resultLink}>{result.resultName}</a>
+                                <a className='adminEventResult adminVideo' href={result.resultVideoLink}>Video</a>
+                                <button className='deleteButton' onClick={(e:any) => deleteResult(`${result.resultName} - ${result.resultYear}`)}>DELETE</button>
                             </div>
                         </>
                     )

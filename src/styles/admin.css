@@ -37,3 +37,39 @@
     max-width: 25%;
     margin-left: 75%;
 }
+
+.dbItemsWrapper {
+    margin-inline: 15%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.mappedItemsWrapper {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.deleteButton {
+    font-size: 14px;
+    margin: 0 auto;
+    margin-left: 5%;
+}
+
+.adminVideo {
+    margin-left: 2%;
+}
+
+.deleteButton:hover {
+    cursor: pointer;
+}
+
+.adminEventResult {
+    font-size: 18px;
+    color: rgb(11, 28, 110);
+}
+
+.adminEventResult:hover {
+    color: rgb(135, 18, 123);
+}

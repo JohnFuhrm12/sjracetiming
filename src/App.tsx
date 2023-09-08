@@ -17,6 +17,25 @@ import Admin from './components/Admin';
 import { useEffect } from "react";
 import { Routes, Route, Navigate, useLocation  } from 'react-router-dom';
 
+// Firebase Imports
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { doc, setDoc, deleteDoc  } from "firebase/firestore/lite"; 
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAisxb90KdddmYBJPeieRFoKMMnDMNyY3s",
+  authDomain: "sj-race-timing.firebaseapp.com",
+  projectId: "sj-race-timing",
+  storageBucket: "sj-race-timing.appspot.com",
+  messagingSenderId: "821127727275",
+  appId: "1:821127727275:web:06bb89840cbf726db60fee"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 function App() {
   window.addEventListener('scroll', fadeIn);
 
@@ -47,6 +66,10 @@ function App() {
   
     return null;
   };
+
+  const props = {
+    db
+  }
   
   return (
     <>
@@ -62,7 +85,7 @@ function App() {
         <Route path="/terms" element={ <Terms/> }/>
         <Route path="/privacy" element={ <Privacy/> }/>
         <Route path="/success" element={ <EmailSuccess/> }/>
-        <Route path="/admin" element={ <Admin/> }/>
+        <Route path="/admin" element={ <Admin {...props}/> }/>
         <Route path="/404" element={ <PageNotFound/> }/>
         <Route path="*" element={ <Navigate to="/404"/>}/>
       </Routes>
