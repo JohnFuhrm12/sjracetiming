@@ -41,8 +41,8 @@ function Navbar() {
                     <Link to='/results' className='navLink'>Results</Link>
                     <Link to='/contact' className='navLink'>Contact</Link>
                 </div>
-                <label id='hamburgerMenu' onClick={MobileNavAnimation} aria-labelledby="hamburgerMenu">
-                    <input id='menuCheck' type='checkbox' aria-labelledby="menuCheck"/>
+                <label id='hamburgerMenu' onClick={MobileNavAnimation} aria-label="hamburgerMenu">
+                    <input id='menuCheck' type='checkbox' aria-label="menuCheck"/>
                 </label>
             </div>
             <div id='hamburgerNav'>

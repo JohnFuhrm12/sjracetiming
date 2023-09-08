@@ -21,7 +21,7 @@ function Contact() {
                         <form id='contactFormHome' onSubmit={handleSubmit}>
                             <ValidationError prefix="Email" field="email" errors={state.errors}/>
                             <input type='text' name='name' className='contactInputHome' placeholder='Full Name' required/>
-                            <select className='contactSelectHome' name='contactType' defaultValue={'none'} aria-labelledby="contactType" required>
+                            <select className='contactSelectHome' name='contactType' defaultValue={'none'} aria-label="contactType" required>
                                 <option value='none' disabled hidden>Choose from Dropdown</option>
                                 <option value="Race Director">Race Director</option>
                                 <option value="Runner">Runner</option>
