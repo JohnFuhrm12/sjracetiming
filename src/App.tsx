@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
 import Terms from './components/Terms';
 import Privacy from './components/Privacy';
+import EmailSuccess from './components/EmailSuccess';
 
 import Admin from './components/Admin';
 
@@ -34,7 +35,7 @@ function App() {
         fade[i].classList.remove('active');
       }
     }
-  } 
+  };
 
   // All internal Links send you to the top
   function ScrollToTop() {
@@ -45,7 +46,7 @@ function App() {
     }, [pathname]);
   
     return null;
-  }
+  };
   
   return (
     <>
@@ -60,6 +61,7 @@ function App() {
         <Route path="/contact" element={ <Contact/> }/>
         <Route path="/terms" element={ <Terms/> }/>
         <Route path="/privacy" element={ <Privacy/> }/>
+        <Route path="/success" element={ <EmailSuccess/> }/>
         <Route path="/admin" element={ <Admin/> }/>
         <Route path="/404" element={ <PageNotFound/> }/>
         <Route path="*" element={ <Navigate to="/404"/>}/>

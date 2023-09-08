@@ -1,6 +1,8 @@
 import '../styles/home.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
     const events = [
@@ -64,12 +66,24 @@ function Home() {
         return () => clearInterval(intervalID);
     }), [];
 
+    // Contact Validation FormSpree
+    const [state, handleSubmit] = useForm("mjvqrlnb");
+    const navigate = useNavigate();
+
+    if (state.succeeded) {
+        navigate('/success');
+    }; 
+
     return (
         <>
             <div id='homePageBackground' style={{backgroundImage: dynamicBackgroundImage}}>
                 <div id='buttonWrapper'>
-                    <button className='button topHome'>FIND A RACE</button>
-                    <button className='button topHome'>SEE RESULTS</button>
+                    <Link to='/schedule'>
+                        <button className='button topHome'>FIND A RACE</button>
+                    </Link>
+                    <Link to='/results'>
+                        <button className='button topHome'>SEE RESULTS</button>
+                    </Link>
                 </div>
                 <div id='socialIconsWrapperHomePage'>
                     <a href="https://www.facebook.com/SouthJerseyRaceTimingLlc/" target='_blank' className="fa fa-facebook"></a>
@@ -168,17 +182,18 @@ function Home() {
                     <img id='logoContactBlock' className='fade' src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693969389/SJ%20Race%20Timing/g1jzajm3pzy0uzfjyvca.webp' alt='South Jersey Race Timing'/>
                     <div id='contactFormBlockHome' className='fade'>
                         <h2 id='contactHomeTitle'>CONTACT US</h2>
-                        <form id='contactFormHome'>
-                            <input type='text' name='name' className='contactInputHome' placeholder='Full Name'/>
-                            <select className='contactSelectHome' name='contactType' defaultValue={'none'}>
+                        <form id='contactFormHome' onSubmit={handleSubmit}>
+                            <ValidationError prefix="Email" field="email" errors={state.errors}/>
+                            <input type='text' name='name' className='contactInputHome' placeholder='Full Name' required/>
+                            <select className='contactSelectHome' name='contactType' defaultValue={'none'} required>
                                 <option value='none' disabled hidden>Choose from Dropdown</option>
                                 <option value="Race Director">Race Director</option>
                                 <option value="Runner">Runner</option>
                                 <option value="N/A">N/A</option>
                             </select>
-                            <input type='text' name='email' className='contactInputHome' placeholder='youremail@gmail.com'/>
-                            <input type='text' name='phone' className='contactInputHome' placeholder='Phone Number'/>
-                            <textarea name='name' className='contactTextAreaHome' placeholder='Send us a Message!'/>
+                            <input type='text' name='email' className='contactInputHome' placeholder='youremail@gmail.com' required/>
+                            <input type='text' name='phone' className='contactInputHome' placeholder='Phone Number' required/>
+                            <textarea name='message' className='contactTextAreaHome' placeholder='Send us a Message!'/>
                             <button id='contactFormHomeButton' className='button' type='submit'>Send Message</button>
                         </form>
                     </div>

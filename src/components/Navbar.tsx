@@ -9,8 +9,10 @@ function Navbar() {
 
         if (hamburgerMenu.checked) {
             mobileNav.style.translate = '0';
+            mobileNav.style.opacity = '1';
         } else {
-            mobileNav.style.translate = '-100%';
+            mobileNav.style.translate = '0 -150%';
+            mobileNav.style.opacity = '0';
         }
 
     }
@@ -21,7 +23,7 @@ function Navbar() {
         const mobileNav = document.getElementById('hamburgerNav') as HTMLInputElement;
 
         hamburgerMenu.checked = false;
-        mobileNav.style.translate = '-100%';
+        mobileNav.style.translate = '0 -150%';
     }
 
     return (

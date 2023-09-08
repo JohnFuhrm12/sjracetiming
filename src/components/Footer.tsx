@@ -34,7 +34,7 @@ function Footer() {
                     <a href='https://sierranevadawebdesigns.com/' target='_blank' className='footerLinkSmall'>Design</a>
                 </div>
                 <div id='footerLinksSmallWrapperColumn'>
-                    <a onClick={scrollUp} className='footerLinkSmall'>609-206-7555</a>
+                    <p className='footerLinkSmall'>609-206-7555</p>
                     <a href='mailto:runner1311@verizon.net' className='footerLinkSmall'>runner1311@verizon.net</a>
                 </div>
                 <p id='copyright'>Copyright © 2023 | South Jersey Race Timing LLC | All Rights Reserved</p>

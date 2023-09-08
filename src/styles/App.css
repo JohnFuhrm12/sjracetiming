@@ -245,6 +245,25 @@
   font-size: 16px;
 }
 
+.successMessage {
+  font-size: 30px;
+  margin-bottom: 80vh;
+  margin-top: 5%;
+}
+
+
+@media (max-width: 900px) {
+  .legalWrapper {
+    margin-inline: 5%;
+  }
+
+  .successMessage {
+    font-size: 25px;
+    margin-bottom: 60vh;
+    margin-top: 15%;
+  }
+}
+
 @media (max-width: 600px) {
   .infoBlock {
     margin-inline: 5%;
@@ -326,5 +345,9 @@
 
   .resultLink {
     font-size: 25px;
+  }
+
+  .legalWrapper {
+    margin-inline: 5%;
   }
 }

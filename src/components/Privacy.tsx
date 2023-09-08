@@ -1,4 +1,4 @@
-import '../styles/app.css';
+import '../styles/App.css';
 
 function Privacy() {
     return (

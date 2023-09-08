@@ -104,8 +104,8 @@
  }
 
  #hamburgerNav {
-    translate: -100%;
-    background-color: rgba(24, 24, 24, 0.864);
+    translate: 0 -150%;
+    background-color: rgba(255, 255, 255, 0.836);
     position: relative;
     z-index: 3;
     transition: 200ms ease-in-out;
@@ -114,6 +114,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
  }
 
  .mobileNavLink {
@@ -123,8 +125,8 @@
     margin-bottom: 0.5%;
     transition: 0.5s;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: black;
+    font-weight: 500;
 }
 
 .mobileNavLink:hover {
