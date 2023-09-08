@@ -1,26 +1,22 @@
 import '../styles/schedule.css';
+import { useEffect, useState } from 'react';
 
-function Schedule() {
-    const events = [
-        {
-            eventName: 'The Run To Remember 5K',
-            eventLocation: 'Somerset',
-            eventDate: '09',
-            eventDay: 'Sat',
-            eventMonth: 'Sep',
-            dateTime: new Date('2019-09-09'),
-            eventLink: 'https://runsignup.com/Race/NJ/SomersPoint/TheRuntoRemember5K'
-        },
-        {
-            eventName: 'Katz JCC Kids Traithlon',
-            eventLocation: 'Cherry Hill',
-            eventDate: '10',
-            eventDay: 'Sun',
-            eventMonth: 'Sep',
-            dateTime: new Date('2017-12-23'),
-            eventLink: 'https://runsignup.com/Race/NJ/CherryHill/KatzJCCKidsTri'
-        }
-    ];
+// Firebase Imports
+import { collection, getDocs } from 'firebase/firestore/lite';
+
+function Schedule( {...props} ) {
+    const [events, setEvents] = useState([]);
+
+    async function getEvents(db:any) {
+        const eventsCol = collection(db, 'events');
+        const eventsSnapshot = await getDocs(eventsCol);
+        const events = eventsSnapshot.docs.map(doc => doc.data());
+        setEvents(events);
+    };
+
+    useEffect(() => {
+        getEvents(props.db);
+    }, []);
 
     return (
         <>
@@ -28,14 +24,14 @@ function Schedule() {
                 <h1 className='title'>SCHEDULE</h1>
             </div>
             <div id='fullEventsWrapper'>
-            {events.map((event) => {
+            {events.map((event:any) => {
                             return (
                     <>
                         <div className='largeEventWrapper fade' key={event.eventName}>
                             <div id='eventDatesWrapper'>
-                                <h2 className='eventDateLarge'>{event.eventDate}</h2>
+                                <h2 className='eventDateLarge'>{event.eventDay}</h2>
                                     <div className='eventItemDateWrapperLarge'>
-                                        <h2 className='eventDayLarge'>{event.eventDay}</h2>
+                                        <h2 className='eventDayLarge'>{event.eventWeekday}</h2>
                                         <h2 className='eventMonthLarge'>{event.eventMonth}</h2>
                                     </div>
                             </div>

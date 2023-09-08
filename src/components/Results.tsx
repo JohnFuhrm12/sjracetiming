@@ -1,6 +1,6 @@
 import '../styles/results.css';
 
-function Results() {
+function Results( {...props} ) {
     const results = [
         {
             resultMonth: 'August',

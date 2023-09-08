@@ -79,8 +79,8 @@ function App() {
         <Route path='/' element={ <Home/> }/>
         <Route path="/about" element={ <About/> }/>
         <Route path="/services" element={ <Services/> }/>
-        <Route path="/schedule" element={ <Schedule/> }/>
-        <Route path="/results" element={ <Results/> }/>
+        <Route path="/schedule" element={ <Schedule {...props}/> }/>
+        <Route path="/results" element={ <Results {...props}/> }/>
         <Route path="/contact" element={ <Contact/> }/>
         <Route path="/terms" element={ <Terms/> }/>
         <Route path="/privacy" element={ <Privacy/> }/>
