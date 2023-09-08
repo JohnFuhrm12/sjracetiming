@@ -1,0 +1,39 @@
+#adminTitle {
+    font-size: 40px;
+    margin-bottom: 5%;
+}
+
+.adminSubtitle {
+    font-size: 30px;
+}
+
+.adminForm {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 30%;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.adminForm label { 
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.adminForm input { 
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgb(79, 79, 79);
+    color: white;
+    margin-bottom: 2%;
+}
+
+.adminForm input::placeholder { 
+    color: rgba(255, 255, 255, 0.586);
+}
+
+.adminForm button {
+    max-width: 25%;
+    margin-left: 75%;
+}
