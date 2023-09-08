@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // Firebase Imports
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { doc, setDoc } from "firebase/firestore/lite"; 
+import { doc, setDoc, deleteDoc  } from "firebase/firestore/lite"; 
 
 // Firebase configuration
 const firebaseConfig = {
@@ -64,7 +64,7 @@ function Admin() {
             dateTime: dateTime,
             eventLink: eventLink
           });
-          clearState();
+          reloadPage();
     };
 
     // Result State
@@ -84,13 +84,24 @@ function Admin() {
             resultLink: resultLink,
             resultVideoLink: resultVideoLink
           });
-          clearState();
+          reloadPage();
     };
 
-    function clearState() {
+    function reloadPage() {
         location.reload();
     };
 
+    // Delete Event
+    const deleteEvent = async (id:string) => {
+        await deleteDoc(doc(db, "events", id));
+        reloadPage();
+    };
+
+    // Delete Result
+    const deleteResult = async (id:string) => {
+        await deleteDoc(doc(db, "results", id));
+        reloadPage();
+    };
 
     return (
         <>
@@ -134,6 +145,7 @@ function Admin() {
                         <>
                             <div className='testKey' key={event}>
                                 <a href={event.eventLink}>{event.eventName}</a>
+                                <button onClick={(e:any) => deleteEvent(`${event.eventName} - ${event.dateTime}`)}>DELETE</button>
                             </div>
                         </>
                     )
@@ -146,6 +158,7 @@ function Admin() {
                         <>
                             <div className='testKey' key={result}>
                                 <h2>{result.resultName}</h2>
+                                <button onClick={(e:any) => deleteResult(`${result.resultName} - ${result.resultYear}`)}>DELETE</button>
                             </div>
                         </>
                     )
