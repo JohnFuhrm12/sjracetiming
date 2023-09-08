@@ -2,6 +2,11 @@ import '../styles/footer.css';
 import { Link } from 'react-router-dom';
 
 function Footer() {
+    // Function to scroll back to top
+    function scrollUp() {
+        document.documentElement.scrollTo({ top:0, behavior:'smooth'});
+    };
+
     return (
         <>
             <div id='footerWrapper'>
@@ -12,7 +17,7 @@ function Footer() {
                     <a href='https://chronotrack.com/' target='_blank'>
                         <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891297/SJ%20Race%20Timing/unaejbz9ggqv90fnk4ig.png' className='sponsorImg' alt='Chrono Track'/>
                     </a>
-                    <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693880283/SJ%20Race%20Timing/gyrk7mzuutrns1ntgkvx.webp' className='sponsorImg' alt='South Jersey Race Timing'/>
+                    <img onClick={scrollUp} src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693880283/SJ%20Race%20Timing/gyrk7mzuutrns1ntgkvx.webp' className='sponsorImg' alt='South Jersey Race Timing'/>
                     <a href='https://runsignup.com/' target='_blank'>
                         <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891297/SJ%20Race%20Timing/hmydnvu0dbf8k1jgdvdn.webp' className='sponsorImg' alt='Run SignUp'/>
                     </a>
@@ -26,11 +31,11 @@ function Footer() {
                 <div id='footerLinksSmallWrapper'>
                     <Link to='/terms' className='footerLinkSmall'>Terms and Conditions</Link>
                     <Link to='/privacy' className='footerLinkSmall'>Privacy Policy</Link>
-                    <a href='https://sierranevadawebdesigns.com/' className='footerLinkSmall'>Design</a>
+                    <a href='https://sierranevadawebdesigns.com/' target='_blank' className='footerLinkSmall'>Design</a>
                 </div>
-                <div id='footerLinksSmallWrapper'>
-                    <p className='footerLinkSmall'>609-206-7555</p>
-                    <p className='footerLinkSmall'>runner1311@verizon.net</p>
+                <div id='footerLinksSmallWrapperColumn'>
+                    <a onClick={scrollUp} className='footerLinkSmall'>609-206-7555</a>
+                    <a href='mailto:runner1311@verizon.net' className='footerLinkSmall'>runner1311@verizon.net</a>
                 </div>
                 <p id='copyright'>Copyright © 2023 | South Jersey Race Timing LLC | All Rights Reserved</p>
             </div>

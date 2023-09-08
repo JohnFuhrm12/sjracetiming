@@ -2,6 +2,7 @@ import '../styles/navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+    // Open Navbar (Slide into View)
     function MobileNavAnimation() {
         const hamburgerMenu = document.getElementById('menuCheck') as HTMLInputElement;
         const mobileNav = document.getElementById('hamburgerNav') as HTMLInputElement;
@@ -14,6 +15,7 @@ function Navbar() {
 
     }
 
+    // Close Navbar (Slide out of View)
     function closeNav() {
         const hamburgerMenu = document.getElementById('menuCheck') as HTMLInputElement;
         const mobileNav = document.getElementById('hamburgerNav') as HTMLInputElement;

@@ -39,6 +39,9 @@ function Home() {
         }
     ];
 
+    // Database Explanation: Events Hold All Seperated Date Information for Display and Regular Date to OrderBy next upcoming Race First
+    // Results will grab Name for Display and The Link to Results Page and Date, Orderby Most recents Result First
+
     const [dynamicBackgroundImage, setDynamicBackgroundImage] = useState('url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694019957/SJ%20Race%20Timing/e00x6odujttar6bxntsm.jpg)');
     const [counter, setCounter] = useState(0);
 
@@ -46,6 +49,7 @@ function Home() {
     'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694020064/SJ%20Race%20Timing/av8msxn695ipcbzmmod9.jpg)',
      'url(https://res.cloudinary.com/dvmw658s9/image/upload/v1694019957/SJ%20Race%20Timing/e00x6odujttar6bxntsm.jpg)'];
 
+    // Constantly Loop Through Background Images
     useEffect(() => {
         const intervalID = setInterval(() =>  {
             if (counter < 2) {

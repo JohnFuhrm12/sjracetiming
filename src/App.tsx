@@ -13,11 +13,13 @@ import Privacy from './components/Privacy';
 
 import Admin from './components/Admin';
 
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from "react";
+import { Routes, Route, Navigate, useLocation  } from 'react-router-dom';
 
 function App() {
   window.addEventListener('scroll', fadeIn);
 
+   // Event listener for CSS fade class 
   function fadeIn() {
     const fade = document.querySelectorAll('.fade')
 
@@ -33,9 +35,21 @@ function App() {
       }
     }
   } 
+
+  // All internal Links send you to the top
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
   
   return (
     <>
+      <ScrollToTop />
       <Navbar/>
       <Routes>
         <Route path='/' element={ <Home/> }/>
