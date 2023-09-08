@@ -12,10 +12,10 @@ function Footer() {
             <div id='footerWrapper'>
                 <div id='sponsorImgWrapper'>
                     <a href='http://www.pinelandstriders.com/' target='_blank'>
-                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891296/SJ%20Race%20Timing/lm9mg9nllahm0ecuctlz.jpg' className='sponsorImg' alt='Pineland Striders'/>
+                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1694144351/jz4qcukshksqicmbws5m.webp' className='sponsorImg' alt='Pineland Striders'/>
                     </a>
                     <a href='https://chronotrack.com/' target='_blank'>
-                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693891297/SJ%20Race%20Timing/unaejbz9ggqv90fnk4ig.png' className='sponsorImg' alt='Chrono Track'/>
+                        <img src='https://res.cloudinary.com/dvmw658s9/image/upload/v1694144351/j6aam1pzedpwwjs7vrjo.webp' className='sponsorImg' alt='Chrono Track'/>
                     </a>
                     <img onClick={scrollUp} src='https://res.cloudinary.com/dvmw658s9/image/upload/v1693880283/SJ%20Race%20Timing/gyrk7mzuutrns1ntgkvx.webp' className='sponsorImg' alt='South Jersey Race Timing'/>
                     <a href='https://runsignup.com/' target='_blank'>
