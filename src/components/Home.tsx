@@ -98,7 +98,7 @@ function Home() {
             </div>
             <div className='infoBlockBlue'>
                 <div className='eventsResultsWrapper'>
-                    <div id='eventsBlock'>
+                    <div id='eventsBlock' key={'eventsBlock'}>
                         <h2 className='subtitleBlue'><span className='pinkSubtitle'>UPCOMING</span> EVENTS</h2>
                         {events.map((event) => {
                             return (
